@@ -1,0 +1,53 @@
+{% assign mydocs = site.docs | group_by: 'category' %}
+{% assign pages = site.pages | sort: 'order' %}
+<ul id="slide-out" class="side-nav">
+    <li><a href="{{ site.baseurl }}/" class="orange-text {% if "/" == page.url %}active{% endif %}">Home</a></li>
+    <li><a href="{{ site.baseurl }}/news/" class="orange-text {% if "/news" == page.url %}active{% endif %}">News</a></li>
+    {% for item in pages %}
+    {% if item.title and item.show_in_sidebar %}
+    <li>
+        <a href="{{ item.url | prepend: site.baseurl }}.html"
+           class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% assign categories = site.data.categories | sort: 'order' %}
+    {% for cat in categories %}
+    {% for mycat in mydocs %}
+    {% if mycat.name == cat.key %}
+    <li><div class="category">{{ cat.title }}</div>
+    <ul>
+        {% assign items = mycat.items | sort: 'order' %}
+        {% for item in items %}
+            {% if item.show_in_sidebar %}
+            <li><a href="{{ item.url | prepend: site.baseurl }}.html"
+                class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul></li>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</ul>
+<a href="#" class="menu-button" data-activates="slide-out">
+    <span class="burger-icon"></span>
+</a>
+<div class="navbar-fixed">
+    <nav class="white orange-text">
+        <div class="container container-large">
+        <div class="row">
+            <div class="col s12 offset-l1 l10 xl8 offset-xl2">
+            <a class="brand-logo" href="{{ site.baseurl }}/"><img style="padding-top:0.5ex; height: 4.8ex;" src="/OmniOSce_logo.svg" alt="Home"></a>
+            <ul class="right hide-on-med-and-down">
+                {% for item in pages %}
+                {% if item.title and item.show_in_menu %}
+                <li><a href="{{ item.url | prepend: site.baseurl }}.html" class="orange-text {% if item.url == page.url %}active{% endif %}">{{ item.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+</div>
+

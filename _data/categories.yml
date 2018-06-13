@@ -1,0 +1,20 @@
+- key: about
+  title: About OmniOSce
+  order: 10
+
+- key: setup
+  title: OmniOS Setup
+  order: 20
+
+- key: info
+  title: OmniOS Operation
+  order: 30
+
+- key: dev
+  title: OmniOS Development
+  order: 40
+
+- key: makingof
+  title: The Making Of
+  order: 99
+

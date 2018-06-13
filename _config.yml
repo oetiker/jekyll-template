@@ -1,0 +1,52 @@
+# Site settings
+title: OmniOS Community Edition
+description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, KVM and Linux zone support
+url: "https://www.omniosce.org"
+baseurl: ""
+logo: OmniOS Community Edition
+paginate: 12
+paginate_path: "/news/page:num/"
+download_path: https://downloads.omniosce.org/media
+download_prefix: omniosce-
+owner:
+    email: info@omniosce.org
+    facebook:
+        show: true
+        name: "OmniOS Community Edition"
+        url: "https://fb.me/omniosce"
+    github:
+        show: true
+        username: "omniosorg"
+    twitter:
+        show: true
+        username: "omniosce"
+    disqus:
+        show: false
+        username: "ichihararifa"
+    linkedin:
+        show: false
+        profile: "https://linkedin.com/in/your-profile-id-here"
+sass:
+    sass_dir: _sass
+    style: compressed
+
+collections:
+    docs:
+        output: true
+        permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: page
+      order: 999
+
+
+#exclude:
+#  - /vendor/bundle/ruby/2.4.0/gems/jekyll-2.4.0/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb
+
+markdown: kramdown
+highlighter: rouge
+
