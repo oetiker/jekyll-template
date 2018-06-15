@@ -1,6 +1,6 @@
 # Site settings
-title: OmniOS Community Edition
-description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, KVM and Linux zone support
+title: Jekyll Sample Template
+description: this is a cool site with a menu
 url: "https://oetiker.github.io"
 baseurl: "/jekill-template"
 logo: OmniOS Community Edition
