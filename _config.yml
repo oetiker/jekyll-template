@@ -1,8 +1,8 @@
 # Site settings
 title: OmniOS Community Edition
 description: illumos based server OS with ZFS, DTrace, Crossbow, SMF, KVM and Linux zone support
-url: "https://www.omniosce.org"
-baseurl: ""
+url: "https://oetiker.github.io"
+baseurl: "/jekill-template"
 logo: OmniOS Community Edition
 paginate: 12
 paginate_path: "/news/page:num/"
@@ -49,6 +49,3 @@ defaults:
 
 markdown: kramdown
 highlighter: rouge
-
-
-theme: jekyll-theme-cayman
