@@ -1,6 +1,12 @@
 ---
 layout: default
+title: Home
 ---
+
+# Hello World
+
+Bla Bla Bla
+
 <div class="container omniad">
     <div class="row">
        <div class="features col s12 m8 l8 xl9">
