@@ -6,7 +6,7 @@ order: 10
 show_in_sidebar: true
 ---
 
-<img class="responsive-img" src="/OmniOSce_logo.svg" alt="OmniOS Community Edition" />
+<img class="responsive-img" src="{{ site.baseurl }}/assets/images/OmniOSce_logo.svg" alt="OmniOS Community Edition" />
 
 On April 21st 2017, [Robert Treat announced](https://lists.omniti.com/pipermail/omnios-discuss/2017-April/008699.html) 
 that OmniTI would suspend active development of OmniOS and support
