@@ -9,15 +9,7 @@ Bla Bla Bla
 
 <div class="container omniad">
     <div class="row">
-       <div class="features col s12 m8 l8 xl9">
-          <div class="row">
-              <div class="claim col s12 offset-m2 m8">
-                  <img src="/OmniOSce_logo.svg" alt="OmniOS CE Logo" class="responsive-img"/>
-              </div>
-              <div class="claim col s12 offset-m2 m8">
-                  The Open Source Enterprise Server OS with just the features you need.
-              </div>
-          </div>
+       <div class="features col s12">
            <div class="row">
                <div class="col s12">
                    <h3>Key Features</h3>
@@ -134,32 +126,6 @@ receive updates for three years so you can schedule upgrades when convenient.
                   </div>
                </div>
            </div>
-        </div>
-        <div class="news col s12 m4 l4 xl3">
-            <div class="row">
-                <div class="col s12">
-                    <h3>Latest News</h3>
-                </div>
-            {% for post in site.posts limit:10 %}
-                <div class="col s12">
-                <div class="card news-card">
-                    <a href="{{ post.url | prepend: site.baseurl }}.html">
-                        <div class="card-content">
-                            <div class="news-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-                                {% if post.synopsis %}
-                                    <p>{{ post.synopsis }}</p>
-                                {% else %}
-                                    <p>{{ post.title }}</p>
-                                {% endif %}
-                        </div>
-                    </a>
-                </div>
-                </div>
-            {% endfor %}
-                <div class="col s12">
-                    <a href="/news/">more news ...</a>
-                </div>
-            </div>
         </div>
     </div>
 </div>
